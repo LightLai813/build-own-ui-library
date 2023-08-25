@@ -1,12 +1,17 @@
 ---
 theme: apple-basic
-background: 'https://www.vpon.com/wp-content/uploads/2022/06/vision.jpg'
 class: text-center
 highlighter: shiki
 lineNumbers: false
 transition: fade-out
 title: Building Your Own UI Library from Scratch
 ---
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 # Building Your Own UI Library from Scratch
 
@@ -103,26 +108,37 @@ Rollup 的設計初衷主要是針對庫（libraries）和模組，所以它在�
 
 ---
 
-### 輸出格式
-1. main (cjs)
-   - 用途：指定 Node.js 環境下的入口文件，也是大部分打包工具的默認入口。
-   - 格式：通常是 CommonJS 格式。
-2. module (esm)
-   - 用途：提供給支持 ES 模組語法的現代打包工具（例如 Rollup 和 Webpack 2+）的入口。
-   - 格式：通常是 ES 模組格式，可以利用 Tree-shaking 來移除未使用的代碼。
-3. browser (umd)
-   - 用途：專門為瀏覽器環境提供的入口點。當你的庫有一些瀏覽器專用的代碼時，可以使用這個字段。
-   - 格式：可以是 UMD 格式或其他瀏覽器支持的格式。
+# 輸出格式
+## main (cjs)
+- 用途：指定 Node.js 環境下的入口文件，也是大部分打包工具的默認入口。
+- 格式：通常是 CommonJS 格式。
+
+## module (esm)
+- 用途：提供給支持 ES 模組語法的現代打包工具（例如 Rollup 和 Webpack 2+）的入口。
+- 格式：通常是 ES 模組格式，可以利用 Tree-shaking 來移除未使用的代碼。
+
+## browser (umd)
+- 用途：專門為瀏覽器環境提供的入口點。當你的庫有一些瀏覽器專用的代碼時，可以使用這個字段。
+- 格式：可以是 UMD 格式或其他瀏覽器支持的格式。
 
 ---
 
 # Release
 
+```
+npm publish
+```
+[Creating and publishing private packages](https://docs.npmjs.com/creating-and-publishing-private-packages)
+
+[Creating and publishing scoped public packages](https://docs.npmjs.com/creating-and-publishing-scoped-public-packages)
+
+
+
 ---
 
 # Reflections
 
-### Pros
+## Pros
 - 可以在多個 Repo 使用相同 component
 - 擴充調整需求相對彈性
 - 面試非常非常加分 
@@ -133,10 +149,10 @@ Rollup 的設計初衷主要是針對庫（libraries）和模組，所以它在�
 
 # Reflections
 
-### Cons
-- 修改完後，要發佈之後，其他專案才可以使用 -> monorepo
-- UIUX 也是一門專業知識，若沒有專業 UI designer 配合，產出的 Component 可能不符合大眾使用習慣
-- 更新迭代不如第三方套件快
+## Cons
+- 修改完後，要發佈之後，其他專案才可以使用 --> monorepo
+- UIUX 也是一門專業知識，若沒有專業 UI designer 配合，產出的 Component 可能不符合大眾使用習慣 [Material UI Guideline](https://m3.material.io/components)
+- 人力不足時，更新迭代不如第三方套件快
 
 <img src="images/1692939084413.png" style="height: 300px;" />
 
@@ -146,7 +162,8 @@ Rollup 的設計初衷主要是針對庫（libraries）和模組，所以它在�
 # Reference
 - [30 天擁有一套自己手刻的 React UI 元件庫](https://ithelp.ithome.com.tw/2020-12th-ironman/articles/3999)
 - [32K star 的 Chakra UI，以及未来的展望](https://juejin.cn/post/7249286405024776249?utm_source=gold_browser_extension)
-- [Material UI Guideline](https://m3.material.io/components)
+<br />
+<br />
 
 - [MUI - Github](https://github.com/mui/material-ui)
 - [Ant Desing - Github](https://github.com/ant-design/ant-design)
