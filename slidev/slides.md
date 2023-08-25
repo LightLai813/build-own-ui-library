@@ -31,7 +31,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 [Tutorial](https://storybook.js.org/tutorials/intro-to-storybook/react/zh-TW/get-started/)
 ```
 # Clone the template
-npx degit chromaui/intro-storybook-react-template ui-library
+npx degit LightLai813/build-own-ui-library ui-library
 
 cd ui-library
 
