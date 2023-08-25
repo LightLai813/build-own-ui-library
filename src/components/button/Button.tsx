@@ -1,13 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './button.css';
 
 interface ButtonProps {
   /** 按鈕顯示文字 */
   label: string
+
+  /** 預設樣式 */
   primary?: boolean, 
+
+  /** 按鈕底色 */
   backgroundColor?: string, 
+
+  /** 按鈕尺寸 */
   size?: 'small'|'medium'|'large', 
+
+  /** click event */
   onClick?: () => void
 }
 /**

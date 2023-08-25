@@ -1,9 +1,21 @@
 {
   "name": "build-own-ui-library",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/LightLai813"
+  },
   "version": "0.2.0",
   "description": "",
   "author": "LL",
   "type": "module",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "browser": "dist/umd/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build": "rollup -c;"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/LightLai813/build-own-ui-library"
@@ -17,15 +29,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "init-msw": "msw init public/"
-  },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-typescript": "^11.1.2",
     "@storybook/addon-essentials": "^7.3.2",
     "@storybook/addon-interactions": "^7.3.2",
     "@storybook/addon-links": "^7.3.2",
@@ -37,11 +43,10 @@
     "@storybook/testing-library": "^0.2.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
-    "msw": "^1.2.1",
-    "msw-storybook-addon": "^1.8.0",
     "prop-types": "^15.8.1",
-    "storybook": "^7.3.2",
-    "vite": "^4.2.0"
+    "rollup": "^3.28.1",
+    "rollup-plugin-dts": "^6.0.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "storybook": "^7.3.2"
   }
 }
